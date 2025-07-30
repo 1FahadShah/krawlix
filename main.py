@@ -27,6 +27,7 @@ def crawl_topics(topics_file_path):
                 topics.append(line)
 
     for topic in topics:
+        print("\n")
         print("Fetching Summary for: ",topic)
         result = fetch_summary(topic)
 
@@ -35,6 +36,8 @@ def crawl_topics(topics_file_path):
             insert_summary(result)
             save_summary_to_file(result)
             print(f"Summary for {topic} saved in DB")
+            filename = result["topic"].replace(" ", "_") + ".txt"
+            print(f"{filename} file created\n")
         else:
             print("No Summary found for:", topic)
             with open("failed_topics.txt","a",encoding="utf-8") as fail_log:
