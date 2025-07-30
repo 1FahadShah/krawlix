@@ -1,6 +1,6 @@
 import urllib.request
 import urllib.parse
-import jsdon
+import json
 
 def fetch_summary(topic):
     # Fetch summary for the given topic using DuckDuckGo API
