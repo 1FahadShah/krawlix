@@ -1,7 +1,7 @@
 import sys
 import os
 from crawler.fetch import fetch_summary
-from crawler.db_write import create_table, insert_summary
+from crawler.db_writer import create_table, insert_summary
 from datetime import datetime
 
 def crawl_topics(topics_file_path):
@@ -39,3 +39,9 @@ def crawl_topics(topics_file_path):
 
 #manage inputs from CLI
 
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python main.py data/topics.txt")
+    else:
+        topics_file = sys.argv[1]
+        crawl_topics(topics_file)
