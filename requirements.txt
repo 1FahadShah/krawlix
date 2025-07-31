@@ -1,0 +1,2 @@
+# No installation required
+# requirements.txt is intentionally empty — zero dependencies
