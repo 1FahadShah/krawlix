@@ -71,7 +71,7 @@ As part of my **Python for Everybody** specialization capstone, I wanted to go b
 ## 📂 Folder Contents
 
 ```bash
-course-05-capstone-krawlix/
+krawlix/
 ├── crawler/                     # API fetching, DB writing, utility modules
 │   ├── fetch.py
 │   ├── db_writer.py
