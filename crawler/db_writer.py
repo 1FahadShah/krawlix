@@ -1,5 +1,6 @@
 import sqlite3
 import os
+from crawler.utils import get_timestamp
 
 DB_PATH = os.path.join("db","krawlix.sqlite")
 
