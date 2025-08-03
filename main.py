@@ -41,7 +41,7 @@ def crawl_topics(topics_file_path):
         else:
             print("No Summary found for:", topic)
             with open("failed_topics.txt","a",encoding="utf-8") as fail_log:
-                fail_log.write(topic + "\n")
+                fail_log.write(topic + f", {get_timestamp()}" + "\n")
 
 
 #manage inputs from CLI
